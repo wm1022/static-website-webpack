@@ -1,0 +1,38 @@
+﻿/*
+ * 共用-dialog
+ */
+
+.g-dialog {
+	box-sizing: border-box;
+	position: fixed;
+	z-index: @zIndex-g-dialog;
+	left: 50%;
+	min-height: 400px;
+	background-color: #fff;
+	transition: all .3s ease;
+	transform: translate3d(0, -150%, 0);
+
+	a.close {
+		position: absolute;
+		right: 20px;
+		top: 20px;
+		width: 30px;
+		height: 30px;
+		font-size: 30px;
+		line-height: 1;
+		font-family: @font-family-Arial;
+		font-weight: normal;
+		text-align: center;
+		transition: transform .3s ease;
+
+		&:hover,
+		&:active {
+			text-decoration: none;
+			transform: rotate(90deg);
+		}
+	}
+}
+
+.g-dialog--showing {
+	transform: translate3d(0, 0 ,0);
+}

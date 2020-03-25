@@ -1,0 +1,98 @@
+/* 共用-免费申请留学测评弹窗 */
+.g-apply-test {
+  margin-left: -180px;
+
+  .form {
+    position: relative;
+    width: 360px;
+    height: 460px;
+    padding-bottom: 30px;
+    background-color: #fff;
+    box-sizing: border-box;
+
+    .tit {
+      height: 60px;
+      line-height: 60px;
+      font-size: @font-size-larger;
+      color: #fff;
+      text-align: center;
+      background-color: @brand-main;
+    }
+
+    .tip {
+      font-size: @font-size-small;
+      padding: 18px 19px;
+      color: @gray;
+    }
+
+    .collection {
+      padding: 40px 19px 0;
+    }
+
+    .sheet {
+      width: 100%;
+      height: 40px;
+      margin-top: 15px;
+      border-radius: 5px;
+
+      .g-input {
+        width: 100%;
+      }
+
+      select {
+        -webkit-appearance: none;
+      }
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &.select {
+        position: relative;
+
+        &:after {
+          position: absolute;
+          top: 17px;
+          right: 15px;
+          content: '';
+          display: inline-block;
+          width: 0px;
+          height: 0px;
+          border-width: 7px 5px 0 5px;
+          border-style: solid;
+          border-color: #666 transparent transparent transparent;
+        }
+
+      }
+
+    }
+
+    .action {
+
+      .g-btn {
+        width: 140px;
+        height: 40px;
+        line-height: 40px;
+        font-size: @font-size-large;
+        color: #fff;
+        text-align: center;
+        background-color: @brand-main;
+        .center-block();
+
+        &:hover {
+          background-color: lighten(@brand-main, 5%);
+        }
+
+      }
+
+    }
+
+    .close {
+      position: absolute;
+      right: -30px;
+      top: -10px;
+    }
+
+  }
+
+}

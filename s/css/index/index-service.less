@@ -1,0 +1,141 @@
+.index-service {
+
+  .g-wrapper {
+    padding: 30px 20px;
+    background-color: #ffffff;
+  }
+
+  .bd {
+    padding-top: 30px;
+
+    ul {
+      .cf();
+
+      li {
+        position: relative;
+        float: left;
+        width: 150px;
+        height: 240px;
+        overflow: hidden;
+        margin-left: 18px;
+        
+        &:first-child {
+          margin-left: 0;
+        }
+
+        .before {
+          position: relative;
+          top: 42px;
+          width: 150px;
+          text-align: center;
+          opacity: 1;
+          cursor: pointer;
+          // transition: all .2s ease-in-out;
+
+          .pic {
+            position: relative;
+            left: 20px;
+            display: table-cell;
+            vertical-align: middle;
+            width: 110px;
+            height: 110px;
+            margin-left: 20px;
+            border-radius: 50%;
+            border: 1px solid #DDDDDD;
+            box-sizing: border-box;
+
+            .g-iconfont {
+              font-size: 48px;
+              color: #FF4F52;
+            }
+
+          }
+
+          h4 {
+            padding-top: 20px;
+            font-size: 18px;
+            font-weight: normal;
+            color: #222;
+          }
+
+          &:hover {
+            opacity: 0;
+          }
+
+          &:hover + .after {
+            // display: block;
+            top: 0;
+            opacity: 1;
+            // width: 150px;
+            // height: 240px;
+          }
+
+        }
+
+        .after {
+          // display: none;
+          position: absolute;
+          top: 10%;
+          left: 0;
+          // margin-left: -75px;
+          // margin-top: -120px;
+          width: 150px;
+          height: 240px;
+          color: #fff;
+          text-align: center;
+          opacity: 0;
+          border-radius: 12px;
+          background-color: #FF4F52;
+          // transform: rotateY(90deg);
+          transition: all .3s ease-in-out;
+
+          .con {
+            display: table-cell;
+            width: 150px;
+            height: 240px;
+            vertical-align: middle;
+          }
+
+          .g-iconfont {
+            font-size: 46px;
+            // padding-top: 20px;
+          }
+
+          h4 {
+            padding-top: 15px;
+            font-size: 18px;
+            font-weight: normal;
+          }
+
+          .detail {
+            padding-top: 10px;
+          }
+
+          a {
+            color: #fff;
+
+            .g-iconfont {
+              padding-top: 20px;
+              font-size: 14px;
+            }
+
+          }
+
+          &:hover {
+            // display: block;
+            top: 0;
+            opacity: 1;
+            // width: 150px;
+            // height: 240px;
+            // transform: rotateY(0);
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}

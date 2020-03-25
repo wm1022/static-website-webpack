@@ -1,0 +1,146 @@
+.index-yanxue {
+
+  .g-wrapper {
+    padding: 30px 20px;
+    background-color: #fff;
+    .cf();
+
+    .bd {
+      padding-top: 30px;
+    }
+
+    .grid-col-2 {
+
+      .bd {
+        .cf();
+      }
+
+      .item {
+        float: left;
+        width: 245px;
+        margin-left: 30px;
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        .pic {
+          width: 245px;
+          height: 164px;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            transition: all .3s ease-in-out;
+          }
+
+        }
+
+        .txt {
+
+          h4 {
+            max-height: 40px;
+            padding-top: 9px;
+            padding-bottom: 12px;
+            font-size: 16px;
+            font-weight: normal;
+            overflow: hidden;
+          }
+
+          .desc {
+            max-height: 40px;
+            color: #666;
+            overflow: hidden;
+          }
+
+          .info {
+            padding-top: 8px;
+            font-size: 12px;
+            line-height: 18px;
+            color: #999;
+          }
+
+        }
+
+        &:hover {
+
+          .pic img {
+            transform: scale(1.2);
+          }
+
+          .txt h4 {
+            text-decoration: underline;
+          }
+
+        }
+
+      }
+
+    }
+
+    .grid-col-3 {
+      float: right;
+
+      ul {
+
+        li {
+          margin-bottom: 30px;
+
+          a {
+            display: block;
+            .cf();
+
+            &:hover {
+              .pic img {
+                transform: scale(1.2);
+              }
+              .txt p {
+                text-decoration: underline;
+              }
+            }
+
+          }
+
+          .pic {
+            float: left;
+            width: 90px;
+            height: 60px;
+            overflow: hidden;
+
+            img {
+              width: 100%;
+              transition: all .3s ease-in-out;
+            }
+
+          }
+
+          .txt {
+            overflow: hidden;
+            padding-left: 10px;
+
+            p {
+              // max-height: 40px;
+              // overflow: hidden;
+              color: #222;
+              .text-overflow();
+            }
+
+            small {
+              display: block;
+              padding-top: 2px;
+              font-size: 12px;
+              color: #999;
+              max-height: 36px;
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}

@@ -1,0 +1,119 @@
+﻿/*
+ * 表单
+ */
+
+/* 
+// 给以下标签加上class="g-input":
+// select
+// textarea
+// input[type="text"]
+// input[type="password"]
+// input[type="datetime"]
+// input[type="datetime-local"]
+// input[type="date"]
+// input[type="month"]
+// input[type="time"]
+// input[type="week"]
+// input[type="number"]
+// input[type="email"]
+// input[type="url"]
+// input[type="search"]
+// input[type="tel"]
+// input[type="color"]
+ */
+.g-input {
+  box-sizing: border-box;
+  height: @input-height;
+  line-height: @line-height;
+  margin: 0;
+  padding: @input-padding;
+  font-family: @input-font-family;
+  color: @input-color;
+  background-color: @input-bg;
+  border: 1px solid @input-border-color;
+  border-radius: @input-border-radius;
+  box-shadow: @input-box-shadow;
+  transition: box-shadow .1s ease-in-out;
+
+  // Customize the `:focus` state to imitate native WebKit styles.
+  &:focus {
+    outline: 0;
+    // box-shadow: 2px 2px 3px rgba(0,0,0,.1) inset;
+  }
+
+  // Disabled and read-only inputs
+  // Note: HTML5 says that controls under a fieldset > legend:first-child won't
+  // be disabled if the fieldset is disabled. Due to implementation difficulty,
+  // we don't honor that edge case; we style them as disabled anyway.
+  &[disabled],
+  &[readonly],
+  fieldset[disabled] & {
+    cursor: not-allowed;
+    background-color: @input-bg-disabled;
+  }
+  
+  // Reset height for `textarea`s
+  textarea& {
+    height: auto;
+  }
+  
+  // Reset select padding
+  select& {
+    height: @input-height;
+  }
+
+}
+
+.g-select {
+  position: relative;
+
+  select {
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 15px;
+    appearance: none;
+    &::-ms-expand { display: none; } 
+    text-align: center;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    right: 13px;
+    top: 50%;
+    margin-top: -2px;
+    display: inline-block;
+    .delta(bottom, 4px, #666);
+  }
+
+}
+
+/* 
+// 给以下<label>标签加上class="g-input-radio"或者class="g-input-checkbox":
+// <label class="g-input-radio"><input name="" type="radio" value="xx">xx</label>
+// <label class="g-input-checkbox"><input name="" type="checkbox" value="xx">xx</label>
+ */
+.g-input-radio, .g-input-checkbox {
+  display: inline-block;
+  height: @input-height;
+  line-height: @input-height;
+}
+
+/* Make multiple select elements height not fixed */
+select[multiple],
+select[size] {
+  height: auto;
+}
+
+/* file, radio, checkbox */
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 4px;
+}
+
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  .tag-focus();
+}
+

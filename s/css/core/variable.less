@@ -1,0 +1,132 @@
+﻿/*
+ * 全局变量
+ */
+
+/*---------- 全局值 ----------*/
+
+/* 灰色 */
+@gray-darkest:			#222222;
+@gray-darker:			#666666;
+@gray-dark:				#888888;
+@gray:					#999999;
+@gray-light:			#d9d9d9;
+@gray-lighter:			#eeeeee;
+@gray-lightest:			#f7f7f7;
+
+/* 品牌色 */
+@brand-main:			  #eb0000;
+@brand-blue-lighter: #1e70d6;
+@brand-blue:			  #06b4fd;
+@brand-blue-dark:   #000066;
+@brand-orange:			#ff6600;
+@brand-yellow:			#ffc527;
+@brand-yellow-dark: #fdad00;
+@brand-green:			#77cd44;
+@brand-green-dark: #009944;
+@brand-red:				@brand-main;
+@brand-lakered:			#fc3b2a;
+@brand-lakered-dark:     #f11a1a;
+@brand-success:			@brand-green;
+@brand-warning:			@brand-orange;
+@brand-danger:			@brand-red;
+/* 学校品牌色 */
+@brand-school:			@brand-main;
+
+/* 链接 */
+@link-color:			@gray-darkest;
+@link-hover-color:  	@gray-darkest;
+
+/* 文字 & 行高 */
+@text-color:				@gray-darker;
+
+@font-family:  				"Microsoft Yahei", "微软雅黑", Arial, Simsun, sans-serif;
+@font-family-serif:			Georgia, "Times New Roman", Times, serif;
+@font-family-Arial:			Arial, "Hiragino Sans GB", "Microsoft Yahei", "微软雅黑", sans-serif;
+@font-family-Hiragino:  	"Hiragino Sans GB", "微软雅黑", sans-serif;
+@font-family-Yahei:  		"Microsoft Yahei", "微软雅黑", sans-serif;
+@font-family-Simsun:  		Simsun, "Microsoft Yahei", "微软雅黑", sans-serif;
+
+@font-size-hugest:			ceil(@font-size * 2.57);	// 36px
+@font-size-huger:			ceil(@font-size * 2);		// 28px
+@font-size-huge:			ceil(@font-size * 1.71);	// 24px
+@font-size-largest:			ceil(@font-size * 1.42);	// 20px
+@font-size-larger:			ceil(@font-size * 1.28);	// 18px
+@font-size-large:			ceil(@font-size * 1.14);	// 16px
+@font-size:					14px;
+@font-size-small:			ceil(@font-size * 0.85);	// 12px
+
+@line-height:				1.428571429;	// 20/14
+
+/* 文字icon */
+@icon-font-path:			"http://s.vpea.ca/pc/3.0/font/";
+@icon-font-name:			"iconfont";
+
+/* images path */
+@images-path:				"http://s.vpea.ca/pc/3.0/images/";
+
+/* 边框 & 分割线 */
+@border-color:				@gray-lighter;
+
+/* media queries */
+// 特小型设备/手机
+@screen-xs:         480px;
+@screen-phone:        @screen-xs;
+
+// 小型设备/平板
+@screen-sm:         768px;
+@screen-tablet:       @screen-sm;
+
+// 中型设备/电脑桌面
+@screen-md:         992px;
+@screen-desktop:      @screen-md;
+
+// 大型设备/宽屏桌面
+@screen-lg:         1200px;
+@screen-lg-desktop:     @screen-lg;
+
+// So media queries don't overlap when required, provide a maximum
+@screen-xs-max:       (@screen-sm - 1);
+@screen-sm-max:       (@screen-md - 1);
+@screen-md-max:       (@screen-lg - 1);
+
+/* sprite path */
+@sprite-path:       "http://s.vpea.ca/sprite/";
+
+/*---------- 核心模块变量 ----------*/
+
+/* form */
+@input-font-family:				@font-family;
+
+// height, padding
+@input-height:					40px;
+@input-padding:					9px 8px;
+
+// color, bg
+@input-color:					@gray-darkest;
+@input-color-placeholder:		@gray;
+@input-bg:						#fff;
+@input-bg-disabled:				@gray-lighter;
+@input-border-color:			@gray-light;
+@input-border-radius:			0;
+@input-box-shadow:				none;
+
+/* button */
+@btn-font-family:				@font-family;
+
+// 高度
+@btn-height:					40px;
+@btn-padding:					0 20px;
+@btn-border-radius:				20px;
+
+// link-disabled
+@btn-link-disabled-color:   	@gray-light;
+
+/* grid */
+@grid-row-desktop:				960px;
+@grid-row-lg-desktop:			1200px;
+
+/* z-index */
+@zIndex-g-overlay: 100;
+@zIndex-g-modal: 200;
+@zIndex-g-dialog: 300;
+@zIndex-g-toast: 999;

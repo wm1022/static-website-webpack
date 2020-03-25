@@ -1,0 +1,248 @@
+﻿/*
+ * 按钮
+ */
+
+/* 默认 */
+.g-btn {
+	display: inline-block;
+	height: @btn-height;
+	line-height: @btn-height;
+	padding: @btn-padding;
+	font-size: @font-size;
+	font-family: @btn-font-family;
+	font-weight: normal;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	border: 0;
+	// border-radius: @btn-border-radius;
+	user-select: none;
+	box-sizing: border-box;
+	box-shadow: none;
+	
+	&:focus {
+		outline: 0;
+		box-shadow: none;
+	}
+	
+	&:hover,
+	&:active,
+	&:focus {
+		text-decoration: none;
+	}
+	
+	&:active,
+	&.g-btn-active {
+		outline: 0;
+		background-image: none;
+		box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+	}
+	
+	&.g-btn-disabled,
+	&[disabled],
+	fieldset[disabled] & {
+		cursor: not-allowed;
+		pointer-events: none; // Future-proof disabling of clicks
+		opacity: .65;
+		box-shadow: none;
+	}
+}
+
+/* 各种按钮颜色 */
+// 默认按钮
+.g-btn-main-block {
+	.button-block-variant(#fff; @brand-main);
+}
+
+.g-btn-main-line {
+	.button-line-variant(@brand-main);
+	border: 1px solid @brand-main;
+	line-height: (@btn-height - 2);
+}
+
+// 蓝色按钮
+.g-btn-blue-block {
+	.button-block-variant(#fff, @brand-blue);
+}
+
+// 蓝色按钮
+.g-btn-blue-lighter-block {
+	.button-block-variant(#fff, @brand-blue-lighter);
+}
+
+// 蓝色按钮
+.g-btn-blue-dark-block {
+	.button-block-variant(#fff, @brand-blue-dark);
+}
+
+.g-btn-blue-line {
+	.button-line-variant(@brand-blue);
+	border: 1px solid @brand-blue;
+	line-height: (@btn-height - 2);
+}
+
+.g-btn-blue-dark-line {
+	.button-line-variant(@brand-blue);
+	border: 1px solid @brand-blue;
+	line-height: (@btn-height - 2);
+}
+
+// 胭脂红色按钮
+.g-btn-lakered-block {
+	.button-block-variant(#fff, @brand-lakered);
+}
+
+// 胭脂红色按钮
+.g-btn-lakered-dark-block {
+	.button-block-variant(#fff, @brand-lakered-dark);
+}
+
+.g-btn-lakered-line {
+	.button-line-variant(@brand-lakered);
+	border: 1px solid @brand-lakered;
+	line-height: (@btn-height - 2);
+}
+
+// 橘色按钮
+.g-btn-orange-block {
+	.button-block-variant(#fff, @brand-orange);
+}
+
+.g-btn-orange-line {
+	.button-line-variant(@brand-orange);
+	border: 1px solid @brand-orange;
+	line-height: (@btn-height - 2);
+}
+
+// 黄色按钮
+.g-btn-yellow-block {
+	.button-block-variant(#fff, @brand-yellow);
+}
+
+.g-btn-yellow-dark-block {
+	.button-block-variant(#fff, @brand-yellow-dark);
+}
+
+.g-btn-yellow-line {
+	.button-line-variant(@brand-yellow);
+	border: 1px solid @brand-yellow;
+	line-height: (@btn-height - 2);
+}
+
+// 绿色按钮
+.g-btn-green-block {
+	.button-block-variant(#fff, @brand-green);
+}
+
+// 绿色按钮
+.g-btn-green-dark-block {
+	.button-block-variant(#fff, @brand-green-dark);
+}
+
+.g-btn-green-line {
+	.button-line-variant(@brand-green);
+	border: 1px solid @brand-green;
+	line-height: (@btn-height - 2);
+}
+
+.g-btn-green-dark-line {
+	.button-line-variant(@brand-green-dark);
+	border: 1px solid @brand-green-dark;
+	line-height: (@btn-height - 2);
+}
+
+// 红色按钮
+.g-btn-red-block {
+	.button-block-variant(#fff, @brand-red);
+}
+
+.g-btn-red-line {
+	.button-line-variant(@brand-red);
+	border: 1px solid @brand-red;
+	line-height: (@btn-height - 2);
+}
+
+// 灰色按钮
+.g-btn-gray-block {
+	.button-block-variant(#fff, @gray-darker);
+}
+
+.g-btn-gray-line {
+	.button-line-variant(@gray-darker);
+	border: 1px solid @gray-darker;
+	line-height: (@btn-height - 2);
+}
+
+// 黑色按钮
+.g-btn-black-block {
+	.button-block-variant(#fff, @gray-darkest);
+}
+
+.g-btn-black-line {
+	.button-line-variant(@gray-darkest);
+	border: 1px solid @gray-darkest;
+	line-height: (@btn-height - 2);
+}
+
+// 白色按钮
+.g-btn-white-block {
+	.button-block-variant(@gray-darkest, #fff);
+}
+
+.g-btn-white-line {
+	.button-line-variant(#fff);
+	border: 1px solid #fff;
+	line-height: (@btn-height - 2);
+}
+
+// 学校按钮
+.g-btn-school-block {
+	.button-variant(#fff, @brand-school);
+}
+
+.g-btn-school-line {
+	.button-line-variant(@brand-school);
+	border: 1px solid @brand-red;
+	line-height: (@btn-height - 2);
+}
+
+
+/* 链接按钮-按钮像链接一样表现，无边框，无底色 */
+.g-btn-link {
+	color: @link-color;
+	font-weight: normal;
+	cursor: pointer;
+	
+	&,
+	&:active,
+	&[disabled],
+	fieldset[disabled] & {
+		background-color: transparent;
+		box-shadow: none;
+	}
+	  
+	&,
+	&:hover,
+	&:active {
+		border-color: transparent;
+	}
+	  
+	&:hover,
+	&:active {
+		color: @link-hover-color;
+		text-decoration: none;
+		background-color: transparent;
+	}
+	  
+	&[disabled],
+	fieldset[disabled] & {
+		&:hover,
+		&:active {
+			color: @btn-link-disabled-color;
+			text-decoration: none;
+		}
+	}
+}
+
+

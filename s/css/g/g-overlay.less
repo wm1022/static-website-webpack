@@ -1,0 +1,23 @@
+﻿/*
+ * 共用-overlay
+ */
+
+.g-overlay {
+	position: fixed;
+	z-index: @zIndex-g-overlay;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	filter: alpha(opacity=50);
+	background-color: #000;
+	background-color: rgba(0,0,0,.5);
+	transition: opacity .3s ease;
+}
+
+.g-overlay--showing {
+	opacity: 1;
+}
+
+

@@ -1,0 +1,44 @@
+<!-- 共用-免费申请留学测评弹窗 start -->
+<div class="g-apply-test g-dialog g-hidden" id="J-g-apply-test">
+  <div class="form">
+    <fieldset id="J-g-apply-test-form" data-action="/server/form.html">
+      <!-- 号码归属地，接口获取 -->
+      <input type="hidden" name="province">
+
+      <p class="tit">免费留学评估</p>
+      <div class="collection">
+        <div class="sheet">
+          <input type="text" name="name" class="g-input" data-validator-msg="请输入学生姓名" required placeholder="学生姓名">
+        </div>
+        <div class="sheet">
+          <input type="tel" name="tel" maxlength="11" id="J-g-apply-test-form-tel" class="g-input" data-validator-msg="请输入手机号码" required placeholder="手机号码">
+        </div>
+        <div class="sheet select">
+          <select name="country" class="g-input" data-validator-msg="请选择意向国家" required>
+            <option value="" selected>意向国家</option>
+            <option value="canada">加拿大</option>
+            <option value="america">美国</option>
+          </select>
+        </div>
+        <div class="sheet select">
+          <select name="Grade" id="J-g-fixed-form-Grade" class="g-input" required data-validator-msg="请选择学龄">
+            <option value="" selected>学龄</option>
+            <option value="小学">小学</option>
+            <option value="初中">初中</option>
+            <option value="高中">高中</option>
+            <option value="本科生">本科生</option>
+            <option value="研究生">研究生</option>
+            <option value="其它">其它</option>
+          </select>
+          <p class="g-validator-msg" data-validator-target="Grade" data-validator-msg="请选择学龄"></p>
+        </div>
+      </div>
+      <p class="tip">请填写准确号码，以便获得留学顾问提供的咨询帮助和留学资料！您的个人信息，将保密处理！</p>
+      <div class="action">
+        <button id="J-g-apply-test-form-submit" class="g-btn"><span>立即报名</span></button>
+      </div>
+    </fieldset>
+    <a href="javascript:;" title="关闭" class="close J-g-dialog-close"><img src="../../s/images/2019030801.png" alt=""></a>
+  </div>
+</div>
+<!-- 共用-免费申请留学测评弹窗 end -->

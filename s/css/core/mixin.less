@@ -1,0 +1,211 @@
+﻿/*
+ * 混合
+ */
+
+/*---------- 实用工具 ----------*/
+
+/* 清除浮动 */
+.cf() {
+	// IE7-
+	*zoom: 1;
+	// others
+	&:after {
+		content: " ";
+		clear: both;
+		display: table;
+  }
+}
+
+/* 居中对齐 */
+.center-block() {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Text overflow
+// Requires inline-block or block for proper styling
+.text-overflow() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 三角形 */
+// @direction: top, right, bottom, left
+.delta() {
+  display: inline-block;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  vertical-align: middle;
+  font: 0px/9999px serif;
+}
+.delta(@direction; @size; @color) when (@direction = top) {
+  border-width:0 @size @size;
+  border-style:dashed dashed solid;
+  border-color:transparent transparent @color;
+  .delta();
+}
+.delta(@direction; @size; @color) when (@direction = right) {
+  border-width:@size 0 @size @size;
+  border-style:dashed dashed dashed solid;
+  border-color:transparent transparent transparent @color;
+  .delta();
+}
+.delta(@direction; @size; @color) when (@direction = bottom) {
+  border-width:@size @size 0;
+  border-style:solid dashed dashed;
+  border-color:@color transparent transparent;
+  .delta();
+}
+.delta(@direction; @size; @color) when (@direction = left) {
+  border-width:@size @size @size 0;
+  border-style:dashed solid dashed dashed;
+  border-color:transparent @color transparent transparent;
+  .delta();
+}
+
+/* button */
+// 按钮底色和文字颜色
+.button-variant(@color; @background) {
+  color: @color;
+  background-color: @background;
+  transition: background-color .1s ease-in-out;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.g-btn-active {
+    color: @color;
+    background-color: lighten(@background, 5%);
+  }
+	
+  &:active,
+  &.active {
+    background-image: none;
+  }
+	
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &:active,
+    &.g-btn-active {
+      background-color: @background;
+    }
+  }
+}
+
+.button-line-variant(@color) {
+  position: relative;
+  z-index: 0;
+  color: @color;
+  background-color: transparent;
+  transition: color .2s ease-in-out;
+
+  &:before {
+    content: " ";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    // border-radius: 60px;
+    background-color: @color;
+    transition: width .2s ease-in-out;
+  }
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.g-btn-active {
+    color: #fff;
+    
+    &:before {
+      width: 100%;
+    }
+  }
+  
+  &:active,
+  &.active {
+    background-image: none;
+  }
+  
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &:active,
+    &.g-btn-active {
+      background-color: transparent;
+    }
+  }
+}
+
+.button-block-variant(@color; @background) {
+  position: relative;
+  z-index: 0;
+  color: @color;
+  background-color: @background;
+  overflow: hidden;
+  transition: color .2s ease-in-out;
+
+  &:before {
+    content: " ";
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    // border-radius: 60px;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: width .2s ease-in-out;
+  }
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.g-btn-active {
+    color: #fff;
+    
+    &:before {
+      width: 100%;
+    }
+  }
+  
+  &:active,
+  &.active {
+    background-image: none;
+  }
+  
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &:active,
+    &.g-btn-active {
+       background-color: transparent; 
+    }
+  }
+}
+
+.tag-focus() {
+  // Default
+  outline: thin dotted #333;
+  // Webkit
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+
+
+

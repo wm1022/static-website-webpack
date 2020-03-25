@@ -1,0 +1,94 @@
+﻿/*
+ * HTML标准模块(Standard Module Format)
+ * 代码示例：
+ * <div class="g-mod {模块class name}">
+ * <div class="hd"><h2>{标题}</h2></div>
+ * <div class="bd"></div>
+ * <div class="ft"></div>
+ * </div>
+ */
+
+.g-mod {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	.cf();
+
+	.hd {
+		position:relative;
+		.cf();
+	
+		// 标题
+		h1,
+		h2 {
+			padding: 0 20px .5em;
+			font-size: @font-size-larger;
+			font-weight: normal;
+			text-align: center;
+			line-height: 1.5;
+			color: @gray-darkest;
+		}
+    
+		// 副标题
+		h3 {
+			padding: 0 20px .5em;
+			font-size: @font-size-larger;
+			font-weight: normal;
+			text-align: center;
+			line-height: 1.5;
+			color: @gray-dark;
+		}
+		
+		// 文字描述
+		.desc {
+			padding-left: 20px;
+			padding-right: 20px;
+			text-align: center;
+			font-size: @font-size-small;
+			line-height: 1.6;
+			color: @gray-darker;
+			
+			p {
+				padding-bottom: .7em;
+			}
+		}
+	}
+	
+	@media (min-width: @screen-phone) {
+		padding-top: 40px;
+		padding-bottom: 40px;
+		
+		.hd {
+
+			h1,
+			h2,
+			h3  {
+				font-size: @font-size-largest;
+			}
+		}
+	}
+	
+	@media (min-width: @screen-tablet) {
+		padding-top: 50px;
+		padding-bottom: 50px;
+		
+		.hd {
+
+			h1,
+			h2,
+			h3 {
+				font-size: @font-size-huge;
+			}
+			
+			.desc {
+				font-size: @font-size;
+			}
+		}
+	}
+	
+	@media (min-width: @screen-desktop) {
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+}
+
+

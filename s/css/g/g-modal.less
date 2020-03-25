@@ -1,0 +1,100 @@
+﻿/*
+ * 共用-modal
+ */
+
+.g-modal {
+	position: fixed;
+	z-index: @zIndex-g-modal;
+	left: 50%;
+	top: 30%;
+    padding: 30px;
+	width: 520px;
+    margin-left: -260px;
+	background-color: #fff;
+    opacity: 0;
+    box-sizing: border-box;
+    // -webkit-transform: translate3d(0,0,0) scale(1.185);
+    transform: translate3d(0,0,0) scale(1.185);
+    // -webkit-transition-property: -webkit-transform,opacity;
+    // -moz-transition-property: -moz-transform,opacity;
+    // -ms-transition-property: -ms-transform,opacity;
+    // -o-transition-property: -o-transform,opacity;
+    transition-property: transform,opacity;
+
+    .title{
+        position: relative;
+        .cf();
+
+        h6{
+            font-size: @font-size-larger;
+            color: @gray-darkest;
+            float: left;
+            font-weight: normal;
+        }
+
+        a.close {
+            position: absolute;
+            right: 0px;
+            top: -2px;
+            width: 30px;
+            height: 30px;
+            font-size: 30px;
+            line-height: 1;
+            font-family: @font-family-Arial;
+            font-weight: normal;
+            text-align: center;
+            transition: transform .3s ease;
+
+            &:hover,
+            &:active {
+                text-decoration: none;
+                transform: rotate(90deg)
+            }
+        }
+    }
+
+    .text{
+        padding: 20px 0;
+        min-height: 80px;
+        font-size: @font-size-larger;
+    }
+
+    .action{
+        text-align: right;
+
+        .ok,.cancel{
+            width: 100px;
+            height: 40px;
+            line-height: 40px;
+            font-size: @font-size-large;
+            text-align: center;
+            border:none;
+            border-radius: 3px;
+        }
+
+        .ok{
+            color: #fff;
+            background-color: @brand-main;
+        }
+
+        .cancel{
+            margin-right: 20px;
+            color: @brand-main;
+            border: 1px solid @brand-main;
+            background-color: transparent;
+        }
+    }
+}
+
+.g-modal-showing {
+    opacity: 1;
+    // -webkit-transition-duration: .4s;
+    transition-duration: .4s;
+    // -webkit-transform: translate3d(0,0,0) scale(1);
+    transform: translate3d(0,0,0) scale(1);
+}
+
+
+
+
+

@@ -1,0 +1,219 @@
+.index-hero {
+  padding-top: 20px;
+
+  .index_hero {
+    .cf();
+  }
+
+  .guide {
+    float: left;
+    width: 250px;
+    height: 380px;
+    padding: 0 8px;
+    background-color: #fff;
+    box-sizing: border-box;
+    
+    .item {
+      padding-top: 15px;
+
+      h3 {
+        padding: 0 7px 5px;
+        color: @gray-darkest;
+      }
+
+      p {
+        font-size: 13px;
+
+        a {
+          display: inline-block;
+          margin: 5px 8px 0;
+          color: @gray-darker;
+
+          &:hover {
+            color: @brand-main;
+          }
+
+        }
+
+      }
+
+      &.test {
+        h3 {
+          padding: 0 7px 5px;
+        }
+        p {
+          padding-left: 5px;
+          a {
+            margin: 5px 2px 0;
+          }
+        }
+      }
+
+    }
+
+  }
+
+  .banner {
+    float: left;
+    width: 660px;
+    height: 380px;
+    margin-left: 10px;
+
+    .g-carousel-viewport {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .g-carousel-inner {
+      height: 100%;
+
+      li , img {
+        width: 100%;
+      }
+
+    }
+
+    .g-carousel-indicators {
+      position: absolute;
+      bottom: 15px;
+      width: 100%;
+      position: relative;
+
+      li {
+        width: 6px;
+        height: 6px;
+        margin: 0 5px;
+        border-radius: 6px;
+        background-color: #fff;
+        transition: width .2s ease-in-out;
+
+        &.active {
+          width: 26px;
+          background-color: @brand-main;
+        }
+
+      }
+
+    }
+
+  }
+
+  .form {
+    float: right;
+    width: 270px;
+    height: 380px;
+    padding-bottom: 30px;
+    background-color: #fff;
+    box-sizing: border-box;
+
+    .tit {
+      line-height: 50px;
+      font-size: @font-size-larger;
+      color: #fff;
+      text-align: center;
+      background-color: @brand-main;
+    }
+
+    .tip {
+      font-size: @font-size-small;
+      padding: 12px 19px;
+      color: @gray;
+    }
+
+    .collection {
+      padding: 20px 15px 0;
+    }
+
+    .sheet {
+      width: 100%;
+      height: 30px;
+      margin-top: 10px;
+
+      .g-input {
+        width: 100%;
+        height: 30px;
+        padding: 0 10px;
+        font-size: 13px;
+      }
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+    }
+
+    .action {
+
+      .g-btn {
+        width: 106px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 13px;
+        color: #fff;
+        text-align: center;
+        background-color: @brand-main;
+        .center-block();
+
+        &:hover {
+          background-color: lighten(@brand-main, 5%);
+        }
+
+      }
+
+    }
+
+  }
+
+  .hot-links {
+    margin: 20px 0 0;
+    
+    ul {
+      padding: 20px 0;
+      background-color: #fff;
+      .cf();
+
+      li {
+        float: left;
+        width: 20%;
+        height: 100px;
+        line-height: 100px;
+        border-left: 1px solid #eee;
+        box-sizing: border-box;
+        
+        a {
+          display: block;
+          text-align: center;
+
+          em {
+            display: inline-block;
+            width: 66px;
+            height: 66px;
+            color: #fff;
+            text-align: center;
+            line-height: 66px;
+            border-radius: 50%;
+            background-color: #FF4F52;
+
+            .g-iconfont {
+              font-size: 34px;
+              vertical-align: middle;
+            }
+
+          }
+
+          span {
+            padding-left: 5px;
+            font-size: 16px;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}

@@ -1,0 +1,33 @@
+<!-- 首页预约表单 start -->
+<div class="index-form" id="J-index-form">
+  <div class="g-wrapper">
+    <fieldset id="J-index-form-form" class="form" data-action="/server/form.html">
+
+      <input type="hidden" name="province">
+
+      <div class="collection">
+        <div class="sheet">
+          <input type="text" name="name" class="g-input" data-validator-msg="请输入学生姓名" required placeholder="学生姓名">
+        </div>
+        <div class="sheet">
+          <input type="text" name="tel" id="J-index-form-form-tel" class="g-input" data-validator-msg="请输入手机号码" required placeholder="手机号码">
+        </div>
+        <div class="sheet g-select">
+          <select name="grade" class="g-input">
+            <option value="" selected>就读年级</option>
+            <option value="小学">小学</option>
+            <option value="初中">初中</option>
+            <option value="高中">高中</option>
+            <option value="本科生">本科生</option>
+            <option value="研究生">研究生</option>
+            <option value="其它">其它</option>
+          </select>
+        </div>
+      </div>
+      <div class="action">
+        <button id="J-index-form-form-submit" class="g-btn g-btn-main-block"><span>预约免费测评</span></button>
+      </div>
+    </fieldset>
+  </div>
+</div>
+<!-- 首页预约表单 end -->
